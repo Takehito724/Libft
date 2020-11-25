@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 16:53:45 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/20 14:27:00 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/25 23:14:19 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,10 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (0);
 	srcsize = ft_strlen(src);
 	i = 0;
-	while (dstsize == 0)
+	if (dstsize == 0)
 		return (srcsize);
-	while (src[i] != '\0')
+	while (src[i] != '\0' && i != (int)(dstsize - 1))
 	{
-		if (i == (int)(dstsize - 1))
-		{
-			dst[i] = '\0';
-			return (srcsize);
-		}
 		dst[i] = src[i];
 		i++;
 	}
