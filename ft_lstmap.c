@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 15:24:12 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/23 01:21:42 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:03:04 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*lst_new;
 	t_list	*first_lst;
 
-	if (lst == NULL)
+	if (lst == NULL || f == NULL)
 		return (NULL);
 	if (!(first_lst = ft_lstnew((*f)(lst->content))))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 17:14:52 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/20 16:11:17 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:18:56 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
 	char	to_find;
-	int		i;
+	size_t	i;
 
 	str = (char*)s;
 	to_find = (char)c;

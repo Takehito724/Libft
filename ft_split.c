@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 10:13:53 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/23 16:21:59 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:18:22 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ static void		*all_free(char **s, int j)
 char			**ft_split(char const *s, char c)
 {
 	char			**res;
-	unsigned int	i;
-	unsigned int	j;
+	size_t			i;
+	size_t			j;
 	size_t			len;
 
 	if (s == NULL || !(res = (char**)malloc(sizeof(char*) * root_size(s, c))))

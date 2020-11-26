@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 15:46:03 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/25 23:15:13 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:16:42 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_putendl_fd(char *s, int fd)
 	if (s == NULL)
 		return ;
 	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	write(fd, "\n", sizeof(char));
 }

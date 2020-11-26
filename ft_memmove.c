@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 14:51:21 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/20 15:45:46 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:14:22 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	s2 = (unsigned char*)src;
 	if (s1 <= s2)
 		return (ft_memcpy(dst, src, len));
-	else
-	{
-		while (len > 0)
-		{
-			len--;
-			s1[len] = s2[len];
-		}
-		return (dst);
-	}
+	while (len--)
+		s1[len] = s2[len];
+	return (dst);
 }

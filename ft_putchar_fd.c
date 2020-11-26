@@ -6,11 +6,12 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 15:27:56 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/24 03:27:55 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:41:57 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 10:47:34 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/20 16:48:20 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:19:29 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	char		*res;
 	size_t		len;
-	int			i;
+	size_t		i;
 
 	len = ft_strlen(s1);
 	if (!(res = (char*)malloc(sizeof(char) * (len + 1))))

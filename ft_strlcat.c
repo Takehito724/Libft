@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 14:33:49 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/23 16:01:49 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:20:30 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
+	size_t	i;
 	size_t	dstlen;
 	size_t	srclen;
 
@@ -27,7 +27,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 	{
 		if (dstlen + i + 1 == dstsize)
 			break ;
-		dst[(int)dstlen + i] = src[i];
+		dst[dstlen + i] = src[i];
 		i++;
 	}
 	dst[(int)dstlen + i] = '\0';

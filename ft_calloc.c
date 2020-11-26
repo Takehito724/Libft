@@ -6,7 +6,7 @@
 /*   By: tkoami <tkoami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 10:19:42 by tkoami            #+#    #+#             */
-/*   Updated: 2020/11/25 23:17:17 by tkoami           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:00:13 by tkoami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*res;
-	size_t			len;
 
-	len = count * size;
-	if (!(res = (unsigned char*)malloc(len)))
+	if (size == 0 || count == 0)
+	{
+		size = 1;
+		count = 1;
+	}
+	if (!(res = (unsigned char*)malloc(size * count)))
 		return (NULL);
-	ft_bzero(res, len);
+	ft_bzero(res, size * count);
 	return ((void*)res);
 }
